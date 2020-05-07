@@ -124,7 +124,7 @@ namespace Microsoft.PowerToys.Settings.UI.ViewModels
                     OutGoingGeneralSettings snd = new OutGoingGeneralSettings(generalSettings);
 
                     ShellPage.DefaultSndMSGCallback(snd.ToString());
-                    RaisePropertyChanged();
+                    OnPropertyChanged("IsEnabled");
                 }
             }
         }
@@ -362,26 +362,6 @@ namespace Microsoft.PowerToys.Settings.UI.ViewModels
                 }
             }
         }
-
-        /*
-        public int EditorHotkey
-        {
-            get
-            {
-                return _editorHotkey;
-            }
-
-            set
-            {
-                if (value != _editorHotkey)
-                {
-                    _editorHotkey = value;
-                    Settings.Properties.FancyzonesHighlightOpacity.Value = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
-        */
 
         public HotkeySettings EditorHotkey
         {
