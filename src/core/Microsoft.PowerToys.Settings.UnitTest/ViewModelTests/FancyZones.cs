@@ -68,7 +68,7 @@ namespace ViewModelTests
         }
 
         [TestMethod]
-        public void ShiftDrag_ShouldSetValue2True_WhenSuccessful()
+        public void ShiftDrag_ShouldSetValue2False_WhenSuccessful()
         {
             // arrange
             FancyZonesViewModel viewModel = new FancyZonesViewModel();
@@ -78,11 +78,11 @@ namespace ViewModelTests
             ShellPage.DefaultSndMSGCallback = msg =>
             {
                 FancyZonesSettingsIPCMessage snd = JsonSerializer.Deserialize<FancyZonesSettingsIPCMessage>(msg);
-                Assert.IsTrue(snd.Powertoys.FancyZones.Properties.FancyzonesShiftDrag.Value);
+                Assert.IsFalse(snd.Powertoys.FancyZones.Properties.FancyzonesShiftDrag.Value);
             };
 
             // act
-            viewModel.ShiftDrag = true;
+            viewModel.ShiftDrag = false;
         }
 
         [TestMethod]
@@ -104,7 +104,7 @@ namespace ViewModelTests
         }
 
         [TestMethod]
-        public void ZoneSetChangeFlashZones_ShouldSetValue2True_WhenSuccessful()
+        public void ZoneSetChangeFlashZones_ShouldSetValue2False_WhenSuccessful()
         {
             // arrange
             FancyZonesViewModel viewModel = new FancyZonesViewModel();
@@ -194,7 +194,7 @@ namespace ViewModelTests
         }
 
         [TestMethod]
-        public void UseCursorPosEditorStartupScreen_ShouldSetValue2True_WhenSuccessful()
+        public void UseCursorPosEditorStartupScreen_ShouldSetValue2False_WhenSuccessful()
         {
             // arrange
             FancyZonesViewModel viewModel = new FancyZonesViewModel();
