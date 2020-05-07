@@ -72,7 +72,7 @@ namespace ViewModelTests
         {
             // arrange
             FancyZonesViewModel viewModel = new FancyZonesViewModel();
-            Assert.IsFalse(viewModel.ShiftDrag); // check if value was initialized to false.
+            Assert.IsTrue(viewModel.ShiftDrag); // check if value was initialized to false.
 
             // Assert
             ShellPage.DefaultSndMSGCallback = msg =>

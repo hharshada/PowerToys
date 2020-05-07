@@ -10,7 +10,7 @@ namespace Microsoft.PowerToys.Settings.UI.Lib
     {
         public FZConfigProperties()
         {
-            this.FancyzonesShiftDrag = new BoolProperty();
+            this.FancyzonesShiftDrag = new BoolProperty(true);
             this.FancyzonesOverrideSnapHotkeys = new BoolProperty();
             this.FancyzonesZoneSetChangeFlashZones = new BoolProperty(true);
             this.FancyzonesDisplayChangeMoveWindows = new BoolProperty();
